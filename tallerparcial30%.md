@@ -6,8 +6,8 @@
   con la instruccion **SETHI**, ya que esto nos permite almacenar hasta 22 bits en el formato 2. 
   El lenguaje ensamblador que se utiliza es :
 
-Sethi const22,rd
-Sethi %hi(value),rd
+ * Sethi const22,rd
+ * Sethi %hi(value),rd
 
 5. Como puedo reescribir la instrucción **(OR y SUBcc)** cuando inicializo y  comparó 2 registros.
 
