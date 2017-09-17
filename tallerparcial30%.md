@@ -28,7 +28,10 @@ R=
   * CALL
   * JUMP AND LINK
 
+7. ¿Qué significa el bit **a**, en el formato 2 de las instrucciones **BRANCH**?
   
-  
+  * Si la instruccion branch tiene a=0 es por que ejecuta por debajo y luego salta.
+  * Si la instruccion branch tiene a=1 no ejecuta la instruccion que etsa por debajo
+  solo salta.
   
   
