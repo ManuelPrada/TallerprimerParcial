@@ -21,6 +21,12 @@ R=
   * la instruccion SUBcc se puede reescribe con la función CMP
   
   SUbcc %l0,%l1,g0 ==  CMP %l0,%l1
+  
+6. ¿Qué instrucciones utilizan el delay slot antes de saltar?
+
+  * BRANCH
+  * CALL
+  * JUMP AND LINK
 
   
   
