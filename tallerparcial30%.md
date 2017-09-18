@@ -97,10 +97,9 @@ ADD %l1,%l0,%O0
  
   
   
-  *Lenguaje de alto nivel 
+  * Lenguaje de alto nivel 
   
-  int main():
-  {
+  int main():{
   
     int x=5;
     int y=-6;
