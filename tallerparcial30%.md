@@ -108,17 +108,7 @@ ADD %l1,%l0,%O0
    }
    
    
-   
-   
-   
- 
-
-
-
-
-
-
-
+  10. Convierta el siguiente código a lenguaje ensamblador, máquina **SPARC V8** y hexadecimal.
 
 
 
