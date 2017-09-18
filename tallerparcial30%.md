@@ -34,4 +34,20 @@ R=
   * Si la instruccion branch tiene a=1 no ejecuta la instruccion que esta por debajo
   solo salta.
   
+8. ¿Por que la instrucción **CALL** utilizar el registro %o7 ---> registro 15.?
+
+  * Lo utuliza  para guardar la direccion a donde devera volver el procedimimento llamado 
+  al terminarsu ejecucion. 
   
+  9. convertir el programa en lenguaje de máquina a lenguaje ensamblador y luego a lenguaje de alto nivel el siguiente programa:
+```
+10100000000100000010000000000101
+10100010000100000011111111111010
+10010000000001000100000000010000
+```
+   
+* |10|10000|000010|00000|1|0000000000101|
+
+ MOV 5,%l0
+ 
+ int x=5;
