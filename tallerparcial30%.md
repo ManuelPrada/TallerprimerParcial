@@ -10,6 +10,11 @@
  * Sethi const22,rd
  * Sethi %hi(value),rd
 
+
+* Ejemplo : 
+
+
+
 5. Como puedo reescribir la instrucción **(OR y SUBcc)** cuando inicializo y  comparó 2 registros.
 
 R= 
@@ -37,7 +42,7 @@ R=
 8. ¿Por que la instrucción **CALL** utilizar el registro %o7 ---> registro 15.?
 
   * Lo utuliza  para guardar la direccion a donde devera volver el procedimimento llamado 
-  al terminarsu ejecucion. 
+  al terminar su ejecucion. 
   
   9. convertir el programa en lenguaje de máquina a lenguaje ensamblador y luego a lenguaje de alto nivel el siguiente programa:
 ```
@@ -46,8 +51,46 @@ R=
 10010000000001000100000000010000
 ```
    
-* |10|10000|000010|00000|1|0000000000101|
+*  **|10|10000|000010|00000|1|0000000000101|**
 
- MOV 5,%l0
+ * MOV 5,%l0
  
- int x=5;
+ * int x=5;
+
+* **|10|10001|000010|00000|1|1111111111010|**
+
+ * MOV 2,%l1
+ 
+* **10010000000001000100000000010000**
+ 
+  * ADD %l1,%l0,%O0
+  
+  * int x, y;
+   
+   * int sum(x,y)
+   
+   return x+y;
+   }
+   
+   int main(){
+   
+   Using namespace std ;
+   
+   cout <<"la suma  de 17 y 16 es;" <<sum(17,16)<<endl;
+   
+   return 0;
+   }
+   
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
