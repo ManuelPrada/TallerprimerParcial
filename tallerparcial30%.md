@@ -54,38 +54,62 @@ R=
    
 *  **|10|10000|000010|00000|1|0000000000101|**
 ```
-Op[10] = formato 3.
-rd[10000] = %l0.
-op3[000010] = OR 
 
+
+formato 3 = Op[10].
+%l0 = rd[10000]. 
+OR = op3[000010].
+%g0 = rd1[00000].
+imm = 5 =[0000000000 101].
+
+lenguage ensamblador.
 
  * MOV 5,%l0
  
- * int x=5;
 ```
 * **|10|10001|000010|00000|1|1111111111010|**
+```
 
- * MOV 2,%l1
+formato 3 = Op[10].
+%l0 = rd[10000]. 
+OR = op3[000010].
+%g0 = rd1[00000].
+imm = -6 = rd2[1111111111010].
+
+lenguage ensamblador.
+
+ * MOV -6,%l0
  
-* **10010000000001000100000000010000**
+```
+* **|10|01000|000000|10001|0|00000000|10000|**
  
-  * ADD %l1,%l0,%O0
+ ```
+formato 3 =  Op[10].
+%o0 = Rd[01000].
+Add = Op3[000000].
+%L1 = Rs1[10001].
+imm = 0 =i[o].
+Rs2(10000)--> %L0 
+
+lenguaje ensamblador
+ADD %l1,%l0,%O0
+ ```
+ 
   
-  * int x, y;
-   
-   * int sum(x,y)
-   
+  
+  *Lenguaje de alto nivel 
+  
+  int main():
+  {
+  
+    int x=5;
+    int y=-6;
+    
    return x+y;
    }
    
-   int main(){
    
-   Using namespace std ;
    
-   cout <<"la suma  de 17 y 16 es;" <<sum(17,16)<<endl;
-   
-   return 0;
-   }
    
    
  
