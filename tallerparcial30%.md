@@ -40,10 +40,11 @@ R=
   solo salta.
   
 8. ¿Por que la instrucción **CALL** utilizar el registro %o7 ---> registro 15.?
-
-  * Lo utuliza  para guardar la direccion a donde devera volver el procedimimento llamado 
+```
+  Lo utuliza  para guardar la direccion a donde devera volver el procedimimento llamado 
   al terminar su ejecucion. 
   
+  ```
   9. convertir el programa en lenguaje de máquina a lenguaje ensamblador y luego a lenguaje de alto nivel el siguiente programa:
 ```
 10100000000100000010000000000101
@@ -52,11 +53,16 @@ R=
 ```
    
 *  **|10|10000|000010|00000|1|0000000000101|**
+```
+Op[10] = formato 3.
+rd[10000] = %l0.
+op3[000010] = OR 
+
 
  * MOV 5,%l0
  
  * int x=5;
-
+```
 * **|10|10001|000010|00000|1|1111111111010|**
 
  * MOV 2,%l1
