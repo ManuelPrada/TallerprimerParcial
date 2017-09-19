@@ -42,18 +42,33 @@
   con la instruccion **SETHI**, ya que esto nos permite almacenar hasta 22 bits en el formato 2. 
   
   **El lenguaje ensamblador que se utiliza es :**
-
+ 
+```
  * Sethi const22,rd
  * Sethi %hi(value),rd
 
+ 
+```
+ 
+* Ejemplo :  15600
+ 
+```
+ |00000000000000000011110011110000|      0000000000000000001111 22 mas signnificativos  15
+                                       
+				         0011110000 = Or = 240
+					 
+|00|10011|100|0000000000000000001111|
 
-* Ejemplo : 
-
+Sethi 15,%l3
+Or %l3,240,%l0
+ 
+```
 
 
 5. Como puedo reescribir la instrucción **(OR y SUBcc)** cuando inicializo y  comparó 2 registros.
 
-R= 
+ 
+``` 
 
   * La instruccion OR se reescribe con la intruccion MOV
   
@@ -63,6 +78,7 @@ R=
   
   SUbcc %l0,%l1,g0 ==  CMP %l0,%l1
   
+``` 
 6. ¿Qué instrucciones utilizan el delay slot antes de saltar?
 
   * BRANCH
