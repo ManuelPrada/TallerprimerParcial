@@ -432,6 +432,7 @@ Lenguaje de maquina
 |10|01000|000010|00000|0|00000000|10001|
  ```
 
+15. Implemente una función **Div** en lenguaje de alto nivel, lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que calcule la division de un número entero sin signo.
 
 ```
 int división(int x,int y){
