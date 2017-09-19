@@ -11,10 +11,10 @@
  
  2. Diga cuáles son los 4 principios del diseño
  
-  1- La simplicidad favorece la regularidad
-  2- Entre más pequeño más rápido
-  3- Hacer el caso común más rápido
-  4- Buenos diseños demandandan grandes compromisos
+  * La simplicidad favorece la regularidad
+  * Entre más pequeño más rápido
+  * Hacer el caso común más rápido
+  * Buenos diseños demandandan grandes compromisos
   
 
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
