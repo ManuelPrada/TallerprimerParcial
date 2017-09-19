@@ -112,7 +112,7 @@ formato 3 = Op[10].
 %l0 = rd[10000]. 
 OR = op3[000010].
 %g0 = rs1[00000].
-imm = 5 =[0000000000 101].
+imm = 5 =[0000000000101].
 
 lenguage ensamblador.
 
