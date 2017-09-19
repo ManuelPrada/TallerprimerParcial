@@ -382,64 +382,9 @@ Lenguaje de maquina
 ```
 
 
-13.
+14. Implemente una función Fact en lenguaje de alto nivel, lenguaje ensamblador SPARC V8 y lenguaje de máquina SPARC V8 que calcule el factorial de un número entero sin signo.
 
 ```
-int pot(int x,int y){
-	int z = x;
-	if(y==0){
-	return 1;
-	}else{	
-	for(int i=1;i<y;i++){
-		x=x*z;
-		}
-	return x;
-}
-}
 
-Asignar variables 
-
-X = %i0,
-Y = %i1;
-z = %lo,
-i = %l1,
-
-Lenguaje ensamblador
-
-0x0000 mov %i0,%lo
-0x0004 mov 1,%l1
-0x0008 cmp %i1,0
-0x000c BNE a True
-0x0010 mov 0,%Oo
-0x0014 BA a Exit
-True
-
-for
-0x0018 cmp %l1,%i1
-0x001c BGE a Exit1
-0x0020 SLL %i0,%lo,%i0
-0x0024 BA    For
-0x0028 add %l1,1,%l1
-
-Exit1
-0x002c mov %i0,%O1
-
-Exit
-0x0030 NOP
-
-
-|10|10000|000010|00000|0|00000000|11000|     
-|10|10001|000010|00000|1|0000000000001|
-|10|00000|010100|11000|1|0000000000000|    
-|00|1|1001|010|0000000000000000000011|      
-|10|01000|000010|00000|1|0000000000000|
-|00|1|1000|010|0000000000000000001000|
-|10|00000|010100|10001|0|00000000|11001|
-|00||1011|010|0000000000000000000100|
-|10|11000|100101|11000|1|00000000|10000|
-|00|0|1000|010|1111111111111111111100|
-|10|10001|000000|10001|1|00000000000001|
-|10|01001|000010|00000|0|00000000|11001|
-|00|00000|100|0000000000000000000000|  
     
                                         ```
