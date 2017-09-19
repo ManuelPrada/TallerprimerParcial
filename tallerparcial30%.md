@@ -2,7 +2,7 @@
 
 1. Describa la Taxonomía de Flynn
 
-  La taxonomía de Flynn se clasifica en cuatro arquitecturas de computadoras, que se basan en el número de instrucciones concurrentes y    en los flujos de datos:
+   La taxonomía de Flynn se clasifica en cuatro arquitecturas de computadoras, que se basan en el número de instrucciones 	     concurrentes y    en los flujos de datos:
  
  * **SISD:** Una instrucción, un dato: se aplica en monoprocesadores
  * **SIMD:** Una instrucción, multiples datos: se aplica en procesadores vectoriales y matriciales
