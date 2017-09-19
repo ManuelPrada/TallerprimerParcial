@@ -31,7 +31,7 @@
 
 * **Formato 3:** Este formato lo utilizan las instrucciones aritmeticas, de memorias lógicas, shift y jump and link
 
-                        | op | rd | op3 | rs1 | i=i | simm 13 |
+                        	| op | rd | op3 | rs1 | i=i | simm 13 |
 			| op | rd | op3 | rs1 | i=0 | unused(zero) | rs2 |
 			
 
