@@ -148,7 +148,7 @@ ADD %l1,%l0,%O0
  ```
  
   
-  ```
+  
   * Lenguaje de alto nivel 
   
   int main():{
@@ -158,7 +158,7 @@ ADD %l1,%l0,%O0
     
    return x+y;
    }
-   ```
+   
    
   10. Convierta el siguiente código a lenguaje ensamblador, máquina **SPARC V8** y hexadecimal.
 
@@ -296,11 +296,7 @@ main:
  ```
 
 11. Convierta el siguiente código a lenguaje ensamblador, máquina **SPARC V8** y hexadecimal.
-
-
- ```
- ```
- c
+ ```c
 int test(int a, int b, int c){
 	int z;
 	z = a - b + c*4;
@@ -311,19 +307,60 @@ int main(){
 	int p = 4, y = 2, c = -128;
 	int x = test(p,y,c);
 	return x + 45;
-```
+}
  ```
- 
  
   x = %i0 y = %i1 z = %i2 c = %L0  a = %L1    
   
- Paso 1. Test
-0x0000 mov 0,%l3          |10|10011|000010|00000|1|0000000000000|
-0x0004 jmpl %O7+8,%g0     |0|00000|111000|01111|1|0000000001000|            
-0x0008 sub %i0,i1,%l0     |10|10000|000100|11000||00000000|11001|    
-0x000c SLL %i2,2,%l1      |10|rd=10001|100101|11010|1|00000000|00010|
-0x0010 add %l0,%l1,%l3    |10|10011|000000|10000|0|00000000|10001| 
-0x0014 add %l3,2,%O0      |10|01000|000000|10011|1|0000000000010|   
- ```
+  
+  
+  
+  12.
+  
+int multiplicacíon (int x, int y){
+	int a=0;
+	for(int contador=1;contador<=b;contador+=1){
+		b=a+y;
+	}
+	
+	return b;
+	
+}
+
+Asignar variables
+x = %io, 
+y = %i1, 
+b = %lo,
+Contador = %l1,
+
+
+Lenguaje ensamblador
+
+0x0000 mov 0,%lo 
+0x0004 mov 1,%l1     
+
+For
+0x0008 cmp %l1,%i1
+0x000c BG a salida     
+0x0010  add %lo,%io,lo 
+0x0014 BA   For        
+0x0018  add %l1,1,%l1  
+
+salida
+0x001c mov %lo,%Oo  
+        
+
+Lenguaje de maquina
+
+|10|10000|000010|00000|1|0000000000000|     
+|10|10001|000010|00000|1|0000000000001|
+|10|00000|010100|10001|0|00000000|11001|   
+|00|1|1010|010|0000000000000000000100|
+|10|10000|000000|10000|0|00000000|11000|
+|00|0|1000|010|1111111111111111111100|
+|10|10001|000000|10001|1|00000000000001|
+|10|01000|000010|00000|0|00000000|10000|
+
+
 
 
