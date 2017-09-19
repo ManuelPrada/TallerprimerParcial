@@ -296,7 +296,10 @@ main:
  ```
 
 11. Convierta el siguiente código a lenguaje ensamblador, máquina **SPARC V8** y hexadecimal.
- ```c
+
+
+ ```
+ c
 int test(int a, int b, int c){
 	int z;
 	z = a - b + c*4;
@@ -307,15 +310,16 @@ int main(){
 	int p = 4, y = 2, c = -128;
 	int x = test(p,y,c);
 	return x + 45;
-}
+
  ```
+ 
  
   x = %i0 y = %i1 z = %i2 c = %L0  a = %L1    
   
  Paso 1. Test
 0x0000    mov 0,%l3       |10|10011|000010|00000|1|0000000000000|
 0x0004 jmpl %O7+8,%g0     |0|00000|111000|01111|1|0000000001000|            
-  
+0x0008 sub %i0,i1,%l0     |10|10000|000100|11000||00000000|11001|    
  ```
 
 
