@@ -387,6 +387,46 @@ Lenguaje de maquina
 14. Implemente una función Fact en lenguaje de alto nivel, lenguaje ensamblador SPARC V8 y lenguaje de máquina SPARC V8 que calcule el factorial de un número entero sin signo.
 
 ```
+int fact (int x){
+  int y,fact=1;
+  for (y=1 ; y<=x ; y++)
+    {
+         fact=y*fact;
+    }
+    return fact;
+    
+}
+
+Asignar Variables
+
+X = %i0,
+Y = %lo, 
+Fact = %l1, 
+
+Lenguaje ensamblador
+
+0x0000 mov 0,%lo      
+0x0004 mov 1,%l1 
+
+For   
+0x0008 cmp %l1,%i0    
+0x000c BG a salida 
+0x0010 SLL %lo,%l1,%l1 
+0x0014 BA    For    
+0x0018 add %lo,1,%lo
+
+salida
+0x001c mov %l1,%Oo    
+
+Lenguaje de maquina
+|10|10000|000010|00000|1|0000000000000|
+|10|10001|000010|00000|1|0000000000001|
+|10|00000|010100|10001|0|00000000|11000|
+|00|1|1010|010|0000000000000000000100|
+|10|10001|100101|10000|1|00000000|10001|
+|00|0|1000|010|1111111111111111111100|
+|10|10000|000000|10000|1|00000000000001|
+|10|01000|000010|00000|0|00000000|10001|
 
     
                                         ```
