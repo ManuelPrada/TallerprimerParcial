@@ -1,25 +1,28 @@
 # TallerprimerParcial
 
 1. Describa la Taxonomía de Flynn
-
-   La taxonomía de Flynn se clasifica en cuatro arquitecturas de computadoras, que se basan en el número de instrucciones 	     concurrentes y en los flujos de datos:
+```
+La taxonomía de Flynn se clasifica en cuatro arquitecturas de computadoras, que se basan en el número de instrucciones 	     concurrentes y en los flujos de datos:
  
   * **SISD:** Una instrucción, un dato: se aplica en monoprocesadores
   * **SIMD:** Una instrucción, multiples datos: se aplica en procesadores vectoriales y matriciales
   * **MISD:** Multiples instrucciones, un dato: no se utiliza
-  * **MIMD:** Multiples instrucciones, multiples datos: se utiliza en memorias compartidas con SMP, NUMA y con memoria distiuida con         cluster
+  * **MIMD:** Multiples instrucciones, multiples datos: se utiliza en memorias compartidas con SMP, NUMA y con memoria distiuida con         cluster 
+           ```
   
  
  2. Diga cuáles son los 4 principios del diseño
- 
+  ```
    * La simplicidad favorece la regularidad
    * Entre más pequeño más rápido
    * Hacer el caso común más rápido
    * Buenos diseños demandandan grandes compromisos
+                                                    ```
    
    
  3. Explique los tres formatos que se usan en la arquitectura SPARC V8, y que instrucciones usan los formatos correspondientes a la arquitectura SPARC V8
- 
+
+```
 * **Formato 1:** Este formato se utiliza para las instrucciones Call
  
  			| op |  Disp 30 |
@@ -34,7 +37,7 @@
                         | op | rd | op3 | rs1 | i=1 | simm 13 |
 			| op | rd | op3 | rs1 | 1=0 | unused (zero) | rs2 |
 		
-			
+			                                                                 ```
 
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
 
@@ -312,7 +315,7 @@ int main(){
  ```
  ```
  
-  x = %i0 , y = %i1 , z = %i2 , c = %L0  , a = %L1    
+  x = %i0 y = %i1 z = %i2 c = %L0  a = %L1    
   
  paso 2 
 test
@@ -427,6 +430,53 @@ Lenguaje de maquina
 |00|0|1000|010|1111111111111111111100|
 |10|10000|000000|10000|1|00000000000001|
 |10|01000|000010|00000|0|00000000|10001|
-```
+
     
-                                        
+                                        ```
+					
+15. Implemente una función Div en lenguaje de alto nivel, lenguaje ensamblador SPARC V8 y lenguaje de máquina SPARC V8 que calcule la division de un número entero sin signo.
+
+```
+int división(int x,int y){
+int c=0;
+for(int contador=x;contador>0;contador-=y){
+   	c=c+1;
+   }
+  return c;
+}
+
+Asignar Variables
+
+X = %io, 
+Y = %i1, 
+C = %lo, 
+Contador = %l1,
+
+
+Lenguaje ensamblador
+
+0x0000 mov 0,%lo    
+0x0004 mov %io,%l1
+
+For
+0x0008 cmp %l1,0
+0x000c BLE a salida 
+0x0010  add %lo,1,%lo  
+0x0014 BA     For   
+0x001c mov %lo,%O1
+  
+salida
+0x0018  sub %l1,i1,%l1 
+
+Lenguaje de maquina
+
+|10|10000|000010|00000|1|0000000000000|
+|10|10001|000010|00000|0|00000000|11000|
+|10|00000|010100|10011|1|0000000000000|
+|00|1|0010|010|0000000000000000000100|
+|10|10000|000000|10000|1|0000000000001|
+|00|0|1000|010|1111111111111111111100|
+|10|10001|000100|10001|0|00000000|11001|
+|10|01001|000010|00000|0|00000000|10000|
+
+                                         ```
