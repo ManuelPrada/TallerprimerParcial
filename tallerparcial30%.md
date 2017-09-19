@@ -148,7 +148,7 @@ ADD %l1,%l0,%O0
  ```
  
   
-  
+  ```
   * Lenguaje de alto nivel 
   
   int main():{
@@ -158,7 +158,7 @@ ADD %l1,%l0,%O0
     
    return x+y;
    }
-   
+   ```
    
   10. Convierta el siguiente código a lenguaje ensamblador, máquina **SPARC V8** y hexadecimal.
 
