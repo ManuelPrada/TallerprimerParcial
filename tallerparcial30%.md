@@ -18,9 +18,13 @@
    * Buenos diseños demandandan grandes compromisos
    
    
- 3. 
+ 3. Explique los tres formatos que se usan en la arquitectura SPARC V8, y que instrucciones usan los formatos correspondientes a la arquitectura SPARC V8
  
- * Formato 1 ----------------> op   Disp 30       Este formato se utiliza para las instrucciones Call
+ * **Formato 1:** Este formato se utiliza para las instrucciones Call
+ 
+ 	op   Disp 30
+	
+* **Formato 2:** Este formato lo utilizan las instruciones Branch, Sethi
 
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
 
