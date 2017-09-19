@@ -1,5 +1,22 @@
 # TallerprimerParcial
 
+1. Describa la Taxonomía de Flynn
+
+ * La taxonomía de Flynn se clasifica en cuatro arquitecturas de computadoras, que se basan en el número de instrucciones concurrentes y    en los flujos de datos:
+ 
+ **SISD:** Una instrucción, un dato: se aplica en monoprocesadores
+ **SIMD:** Una instrucción, multiples datos: se aplica en procesadores vectoriales y matriciales
+ **MISD:** Multiples instrucciones, un dato: no se utiliza
+ **MIMD:** Multiples instrucciones, multiples datos: se utiliza en memorias compartidas con SMP, NUMA y con memoria distiuida con         cluster
+ 
+ 2. Diga cuáles son los 4 principios del diseño
+ 
+  1- La simplicidad favorece la regularidad
+  2- Entre más pequeño más rápido
+  3- Hacer el caso común más rápido
+  4- Buenos diseños demandandan grandes compromisos
+  
+
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
 
  * El valor grande en la arquitectura sparc v8 que ocupe mas de 13 bits se iniciliza
