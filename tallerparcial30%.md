@@ -31,8 +31,9 @@
 
 * **Formato 3:** Este formato lo utilizan las instrucciones aritmeticas, de memorias lógicas, shift y jump and link
 
-                    | op | rd | op3 | rs1 | i=i | simm 13 |
-			| op | rd | op3 | rs1 | i=0 | unused(zero) | rs2 |
+                        | op | rd | op3 | rs1 | i=1 | simm 13 |
+			| op | rd | op3 | rs1 | 1=0 | unused (zero) | rs2 |
+		
 			
 
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
