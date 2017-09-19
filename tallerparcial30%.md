@@ -20,7 +20,7 @@
    
  3. 
  
- * Formato 1 ----------------> op   Disp 30 Este formato se utiliza para las instrucciones Call
+ * Formato 1 ----------------> op   Disp 30       Este formato se utiliza para las instrucciones Call
 
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
 
