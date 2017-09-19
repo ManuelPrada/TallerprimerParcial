@@ -293,10 +293,10 @@ main:
  
 ``` 
  
- ```
+ 
 
 11. Convierta el siguiente código a lenguaje ensamblador, máquina **SPARC V8** y hexadecimal.
- ```c
+ c
 int test(int a, int b, int c){
 	int z;
 	z = a - b + c*4;
@@ -312,11 +312,26 @@ int main(){
  
   x = %i0 y = %i1 z = %i2 c = %L0  a = %L1    
   
+  paso 2 test
+0x0004 jmpl %O7+8,%g0  |0|00000|111000|01111|1|0000000001000|          
+0x0008 sub %i0,i1,%l0  |10|rd=10000|000100|11000||00000000|11001|   
+0x000c SLL %i2,2,%l1   |10|rd=10001|100101|11010|1|00000000|00010|   
+0x0010 add %l0,%l1,%l3 |10|10011|000000|10000|0|00000000|10001|   
+0x0014 add %l3,2,%O0   |10|01000|000000|10011|1|0000000000010|         
+
+main:
+
+0x0018 mov 4,%io       |10|11000|000010|00000|1|0000000000100|        
+0x001c mov 2,%i1       |10|11001|000010|00000|1|0000000000010|      
+0x0020 mov -128,%i2    |10|11010|000010|00000|1|1111110000000|        
+0x0024 call Test       |01|111111111111111111111111110110|                       
+0x0028 mov 0,%l4       |10|10100|00010|00000|1|0000000000000|      
+0x002c add %l4,45,%O1  |10|01001|000000|10100|1|0000000101101|        
+```
   
-  
-  
-  12.
-  
+12. Implemente una función **Mul** en lenguaje de alto nivel, lenguaje ensamblador **SPARC V8** y lenguaje de máquina SPARC V8 que realice la multiplicación de dos enteros sin signo usando solo sumas.
+ 
+```
 int multiplicacíon (int x, int y){
 	int a=0;
 	for(int contador=1;contador<=b;contador+=1){
@@ -362,5 +377,6 @@ Lenguaje de maquina
 |10|01000|000010|00000|0|00000000|10000|
 
 
+```
 
 
