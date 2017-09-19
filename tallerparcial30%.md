@@ -20,11 +20,20 @@
    
  3. Explique los tres formatos que se usan en la arquitectura SPARC V8, y que instrucciones usan los formatos correspondientes a la arquitectura SPARC V8
  
- * **Formato 1:** Este formato se utiliza para las instrucciones Call
+* **Formato 1:** Este formato se utiliza para las instrucciones Call
  
- 	op   Disp 30
+ 			| op |  Disp 30 |
 	
-* **Formato 2:** Este formato lo utilizan las instruciones Branch, Sethi
+* **Formato 2:** Este formato lo utilizan las instruciones Branches(Bicc, FBfcc, CBccc), SETHI
+
+			| op | rd | op2 | imm 22 |
+			| op |  a | cond | op2 | disp22 |
+
+* **Formato 3:** Este formato lo utilizan las instrucciones aritmeticas, de memorias lógicas, shift y jump and link
+
+                        | op | rd | op3 | rs1 | i=i | simm 13 |
+			| op | rd | op3 | rs1 | i=0 | unused(zero) | rs2 |
+			
 
 4. Explique cómo inicializar un valor grande, que ocupe más de 13 bits, en la arquitectura **SPARC V8**.
 
